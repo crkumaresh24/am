@@ -4,6 +4,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.apj.platform.auth.controllers.vo.LoginRequest;
+import com.apj.platform.auth.controllers.vo.LoginResponse;
 import com.apj.platform.auth.controllers.vo.LoginRequest.EmailLoginRequest;
 import com.apj.platform.auth.controllers.vo.LoginRequest.EmailOTPLoginRequest;
 import com.apj.platform.auth.controllers.vo.LoginRequest.MobileOTPLoginRequest;
@@ -26,13 +27,14 @@ public class AuthLoginController {
     }
 
     @PostMapping
-    public String authenticate(@Valid @RequestBody LoginRequest loginRequest) throws SystemException {
+    public LoginResponse authenticate(@Valid @RequestBody LoginRequest loginRequest) throws SystemException {
+        String accessToken = null;
         if (loginRequest instanceof LoginRequest.UsernameLoginRequest) {
             LoginRequest.UsernameLoginRequest request = (UsernameLoginRequest) loginRequest;
-            return authService.loginByUsernamePassword(request.getUsername(), request.getPassword());
+            accessToken = authService.loginByUsernamePassword(request.getUsername(), request.getPassword());
         } else if (loginRequest instanceof LoginRequest.EmailLoginRequest) {
             LoginRequest.EmailLoginRequest request = (EmailLoginRequest) loginRequest;
-            return authService.loginByEmailPassword(request.getUsername(), request.getPassword());
+            accessToken = authService.loginByEmailPassword(request.getUsername(), request.getPassword());
         } else if (loginRequest instanceof LoginRequest.EmailOTPLoginRequest) {
             LoginRequest.EmailOTPLoginRequest request = (EmailOTPLoginRequest) loginRequest;
             authService.loginByEmailOTP(request.getEmail());
@@ -40,6 +42,6 @@ public class AuthLoginController {
             LoginRequest.MobileOTPLoginRequest request = (MobileOTPLoginRequest) loginRequest;
             authService.loginByMobileOTP(request.getMobileno());
         }
-        return "token";
+        return LoginResponse.builder().accessToken(accessToken).build();
     }
 }

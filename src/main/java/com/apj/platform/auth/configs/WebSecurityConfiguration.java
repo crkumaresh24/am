@@ -42,7 +42,7 @@ public class WebSecurityConfiguration {
         http.authorizeHttpRequests(authorizeHttpRequest -> authorizeHttpRequest
                 .requestMatchers("/actuator/health", "/actuator/metrics", "/actuator/metrics/**", "/v3/api-docs/**",
                         "/swagger-ui/**", "/swagger-ui.html", "/api/monitor/**", "/api/authentication/**",
-                        "/api/v1/auth/signup/**", "/api/v1/auth/login/**")
+                        "/api/v1/auth/signup/**", "/api/v1/auth/login/**", "/api/v1/auth/validate/token")
                 .permitAll()
                 .anyRequest().authenticated());
         http.authenticationProvider(authenticationProvider);
