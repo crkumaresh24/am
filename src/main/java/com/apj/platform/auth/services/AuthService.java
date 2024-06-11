@@ -13,7 +13,7 @@ import com.apj.platform.auth.services.exceptions.EmailNotFoundExcpetion;
 import com.apj.platform.auth.services.exceptions.MobileNoAlreadyExistsExcpetion;
 import com.apj.platform.auth.services.exceptions.UsernameAlreadyExistsExcpetion;
 import com.apj.platform.auth.services.exceptions.UsernameNotFoundExcpetion;
-import com.apj.platform.auth.vo.SystemException;
+import com.apj.platform.commons.vo.SystemException;
 
 @Service
 public class AuthService {

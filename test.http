@@ -38,7 +38,7 @@ Accept-Language: en
 ###
 
 GET http://localhost:8080/api/v1/auth/validate/token
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrY3JhbWFrciIsImlhdCI6MTcxNzgyODA0OCwiZXhwIjoxNzE3ODMxNjQ4fQ.yrmOktFXDXKGpumQcUJaYs-9NiMMSyEukdd52ZDBQnkz
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrY3JhbWFrciIsImlhdCI6MTcxNzg0MTUyMCwiZXhwIjoxNzE3ODQ1MTIwfQ.P8To5E72MpM-8M_OaKUaE1reScjRMtlGx0oMMrktj2I
 
 
 ###

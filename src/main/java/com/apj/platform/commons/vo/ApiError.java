@@ -1,4 +1,4 @@
-package com.apj.platform.auth.vo;
+package com.apj.platform.commons.vo;
 
 import lombok.Data;
 import lombok.ToString;

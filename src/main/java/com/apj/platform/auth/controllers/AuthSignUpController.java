@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.apj.platform.auth.controllers.vo.UserResigter;
 import com.apj.platform.auth.services.AuthService;
-import com.apj.platform.auth.vo.SystemException;
+import com.apj.platform.commons.vo.SystemException;
 
 import jakarta.validation.Valid;
 
@@ -36,12 +36,12 @@ public class AuthSignUpController {
     }
 
     @GetMapping("/exists/email")
-    public boolean isEmailExists(@RequestParam("email") String username) {
-        return this.authService.isEmailExists(username);
+    public boolean isEmailExists(@RequestParam("email") String email) {
+        return this.authService.isEmailExists(email);
     }
 
     @GetMapping("/exists/mobileno")
-    public boolean isMobileNoExists(@RequestParam("mobileno") String username) {
-        return this.authService.isMobileExists(username);
+    public boolean isMobileNoExists(@RequestParam("mobileno") String mobileno) {
+        return this.authService.isMobileExists(mobileno);
     }
 }

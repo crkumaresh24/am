@@ -1,6 +1,6 @@
-package com.apj.platform.auth.constants;
+package com.apj.platform.commons.constants;
 
-public interface ErrorCodes {
+public interface AuthErrorCodes {
     String ERR_INPUT_VALIDATION = "exception.input.validation";
     String ERR_USERNAME_BLANK = "exception.input.username.blank";
     String ERR_PASSWORD_BLANK = "exception.input.password.blank";

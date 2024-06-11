@@ -1,6 +1,6 @@
 package com.apj.platform.auth.controllers.vo;
 
-import com.apj.platform.auth.constants.ErrorCodes;
+import com.apj.platform.commons.constants.AuthErrorCodes;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
@@ -25,9 +25,9 @@ public class LoginRequest {
 
     public static class UsernameLoginRequest extends LoginRequest {
 
-        @NotBlank(message = ErrorCodes.ERR_USERNAME_BLANK)
+        @NotBlank(message = AuthErrorCodes.ERR_USERNAME_BLANK)
         String username;
-        @NotBlank(message = ErrorCodes.ERR_PASSWORD_BLANK)
+        @NotBlank(message = AuthErrorCodes.ERR_PASSWORD_BLANK)
         String password;
 
         public String getUsername() {
@@ -50,9 +50,9 @@ public class LoginRequest {
 
     public static class EmailLoginRequest extends LoginRequest {
 
-        @Email(message = ErrorCodes.ERR_EMAIL_INVALID)
+        @Email(message = AuthErrorCodes.ERR_EMAIL_INVALID)
         String username;
-        @NotBlank(message = ErrorCodes.ERR_PASSWORD_BLANK)
+        @NotBlank(message = AuthErrorCodes.ERR_PASSWORD_BLANK)
         String password;
 
         public String getPassword() {
@@ -75,7 +75,7 @@ public class LoginRequest {
 
     public static class EmailOTPLoginRequest extends LoginRequest {
 
-        @Email(message = ErrorCodes.ERR_EMAIL_INVALID)
+        @Email(message = AuthErrorCodes.ERR_EMAIL_INVALID)
         String email;
 
         public String getEmail() {
@@ -90,9 +90,9 @@ public class LoginRequest {
 
     public static class MobileOTPLoginRequest extends LoginRequest {
 
-        @NotBlank(message = ErrorCodes.ERR_MOBILE_BLANK)
-        @Pattern(regexp = "\\d+", message = ErrorCodes.ERR_MOBILE_INVALID)
-        @Size(min = 10, max = 10, message = ErrorCodes.ERR_MOBILE_INVALID)
+        @NotBlank(message = AuthErrorCodes.ERR_MOBILE_BLANK)
+        @Pattern(regexp = "\\d+", message = AuthErrorCodes.ERR_MOBILE_INVALID)
+        @Size(min = 10, max = 10, message = AuthErrorCodes.ERR_MOBILE_INVALID)
         String mobileno;
 
         public String getMobileno() {

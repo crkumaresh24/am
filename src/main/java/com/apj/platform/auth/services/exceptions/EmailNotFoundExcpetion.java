@@ -1,7 +1,7 @@
 package com.apj.platform.auth.services.exceptions;
 
-import com.apj.platform.auth.constants.ErrorCodes;
-import com.apj.platform.auth.vo.SystemException;
+import com.apj.platform.commons.constants.AuthErrorCodes;
+import com.apj.platform.commons.vo.SystemException;
 
 public class EmailNotFoundExcpetion extends SystemException {
 
@@ -12,6 +12,6 @@ public class EmailNotFoundExcpetion extends SystemException {
 
     @Override
     public String getErrorcode() {
-        return ErrorCodes.ERR_EMAIL_NOTFOUND;
+        return AuthErrorCodes.ERR_EMAIL_NOTFOUND;
     }
 }

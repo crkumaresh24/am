@@ -10,7 +10,7 @@ import com.apj.platform.auth.controllers.vo.LoginRequest.EmailOTPLoginRequest;
 import com.apj.platform.auth.controllers.vo.LoginRequest.MobileOTPLoginRequest;
 import com.apj.platform.auth.controllers.vo.LoginRequest.UsernameLoginRequest;
 import com.apj.platform.auth.services.AuthService;
-import com.apj.platform.auth.vo.SystemException;
+import com.apj.platform.commons.vo.SystemException;
 
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.PostMapping;
