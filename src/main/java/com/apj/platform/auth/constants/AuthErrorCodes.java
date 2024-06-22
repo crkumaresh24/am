@@ -1,7 +1,8 @@
-package com.apj.platform.commons.constants;
+package com.apj.platform.auth.constants;
 
-public interface AuthErrorCodes {
-    String ERR_INPUT_VALIDATION = "exception.input.validation";
+import com.apj.platform.commons.constants.ErrorCodes;
+
+public interface AuthErrorCodes extends ErrorCodes {
     String ERR_USERNAME_BLANK = "exception.input.username.blank";
     String ERR_PASSWORD_BLANK = "exception.input.password.blank";
     String ERR_PASSWORD_LENGTH = "exception.input.password.length";
@@ -12,9 +13,6 @@ public interface AuthErrorCodes {
     String ERR_EMAIL_INVALID = "exception.input.email.invalid";
     String ERR_MOBILE_BLANK = "exception.input.mobileno.blank";
     String ERR_MOBILE_INVALID = "exception.input.mobileno.invalid";
-
-    String ERR_BAD_CREDENTIALS = "exception.input.credentials.invalid";
-
     String ERR_USERNAME_EXISTS = "exception.username.exists";
     String ERR_USERNAME_NOTFOUND = "exception.username.notfound";
     String ERR_EMAIL_EXISTS = "exception.email.exists";

@@ -1,4 +1,4 @@
-# Prerequestie - MySQL Instal las docker
+# Prerequestie - MySQL Install as docker
 docker run --name mysql --restart=always -e MYSQL_ROOT_PASSWORD=mysql -p 3306:3306 -d mysql
 
 # Run as local ddocker container - Individual Steps

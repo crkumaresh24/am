@@ -1,6 +1,6 @@
 package com.apj.platform.auth.services.exceptions;
 
-import com.apj.platform.commons.constants.AuthErrorCodes;
+import com.apj.platform.auth.constants.AuthErrorCodes;
 import com.apj.platform.commons.vo.SystemException;
 
 public class UsernameAlreadyExistsExcpetion extends SystemException {

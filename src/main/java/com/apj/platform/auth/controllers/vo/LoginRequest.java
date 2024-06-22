@@ -1,6 +1,6 @@
 package com.apj.platform.auth.controllers.vo;
 
-import com.apj.platform.commons.constants.AuthErrorCodes;
+import com.apj.platform.auth.constants.AuthErrorCodes;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 

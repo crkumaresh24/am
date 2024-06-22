@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-import com.apj.platform.commons.constants.AuthErrorCodes;
+import com.apj.platform.auth.constants.AuthErrorCodes;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
