@@ -61,6 +61,7 @@ public class WebSecurityConfiguration {
         // config.setAllowedOriginPatterns(yamlConfig.getCorsAllowedList());
         config.addAllowedHeader("*");
         config.addAllowedMethod("*");
+        config.addAllowedOriginPattern("**localhost**");
         source.registerCorsConfiguration("/**", config);
         return new CorsFilter(source);
     }
